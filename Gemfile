@@ -12,7 +12,7 @@ gem 'authlogic-oid'
 gem "composite_primary_keys"
 gem 'figaro' # To easily test OAuth providers in the development mode
 gem 'friendly_id'
-gem 'fog-google', '1.17.0' # Limited to `v1.13.0` due to https://github.com/fog/fog-google/issues/535
+gem 'fog-google', '1.18.0' # Limited to `v1.13.0` due to https://github.com/fog/fog-google/issues/535
 gem 'fog-local', '0.8.0'
 gem 'gemoji'
 gem 'geocoder'
@@ -29,12 +29,12 @@ gem "i18n-js", ">= 3.0.0.rc11"
 gem 'impressionist'
 gem 'jbuilder', '~> 2.11'
 gem 'jquery-rails'
-gem 'mocha', '~> 1.13'
+gem 'mocha', '~> 1.14'
 gem 'mimemagic', '~> 0.3.10'
 gem 'mustermann' , '1.1.1'
-gem 'omniauth', '~> 1.9'
+gem 'omniauth', '~> 2.1'
 gem 'omniauth-facebook', '~> 9.0'
-gem 'omniauth-github', '~> 1.4'
+gem 'omniauth-github', '~> 2.0'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
 gem "paperclip", "~> 6.1.0"
@@ -42,8 +42,8 @@ gem 'passenger'
 gem "php-serialize", :require => "php_serialize"
 gem 'rack-cors', :require => 'rack/cors'
 gem "rack-openid"
-gem "rack-test", "1.1.0"
-gem 'rails', '5.2.6'
+gem "rack-test", "2.0.2"
+gem 'rails', '5.2.8'
 gem 'rails-controller-testing'
 gem 'rails-dom-testing'
 gem 'rails-i18n', '~> 5.1.3'
@@ -53,7 +53,7 @@ gem 'rdiscount', '~> 2.2'
 gem 'react-rails'
 gem "recaptcha", require: "recaptcha/rails"
 gem 'responders', '~> 3.0'
-gem 'rubocop', '~> 1.25.1', require: false
+gem 'rubocop', '~> 1.31.1', require: false
 gem "ruby-openid", :require => "openid"
 gem 'sanitize'
 gem 'sentry-ruby'
@@ -97,14 +97,14 @@ group :mysql, :production do
 end
 
 group :sqlite, :development do
-  gem 'sqlite3', '~> 1.4.2'
+  gem 'sqlite3', '~> 1.4.4'
 end
 
 gem 'coffee-rails', '~> 5.0.0'
 gem 'execjs' # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem "sassc", "~> 2.4.0"
 gem 'sassc-rails'
-gem 'uglifier', '>= 1.0.3'
+gem 'terser', '~> 1.1.8'
 gem 'grape-rails-cache'
 
 group :development do
@@ -126,18 +126,21 @@ group :test, :development do
   gem 'minitest-reporters', '~> 1.5.0'
   gem 'openssl', '~> 3.0.0'
   gem 'phantomjs'
-  gem 'puma', '~> 5.5'
+  gem 'puma', '~> 5.6'
   gem 'rails-perftest'
   gem 'rake', '~> 13.0.6'
   gem 'rest-client'
   gem 'rspec'
-  gem 'selenium-webdriver', '~> 4.1.0'
+  gem 'selenium-webdriver', '~> 4.2.1'
   gem 'test-unit'
   gem 'teaspoon-mocha'
   gem 'timecop'
   gem 'pry-rails'
   gem 'action-cable-testing'
   gem "webmock", "~> 3.14"
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rake', require: false
 end
 
 group :production do
